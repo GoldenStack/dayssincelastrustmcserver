@@ -5,10 +5,13 @@ import Timeline from "../components/Timeline.astro";
 
 <!doctype html>
 <html lang="en">
-	<Meta title="Days since last Rust Minecraft server" />
+	<Meta title="Days since last Rust Minecraft server">
+		<meta slot="header" name="description" content="Days since the last release of a Minecraft server software written in Rust.">
+	</Meta>
 
 	<body>
-		<p class="corner"><a href="https://github.com/GoldenStack/dayssincelastrustmcserver">GitHub</a></p>
+		<!-- inline HTML. sue me. -->
+		<p class="corner" style="left: 16px;"><a target="_blank" rel="noreferrer" href="https://github.com/GoldenStack/dayssincelastrustmcserver">GitHub</a></p>
 
 		<h3>It has been</h3><br />
 		<h1 id="days-since">_</h1><br />
@@ -26,6 +29,9 @@ import Timeline from "../components/Timeline.astro";
 		<Timeline />
 
 		<br>
+
+		<!-- inline HTML. sue me. -->
+		<p class="corner" style="right: 16px;">made by <a target="_blank" rel="noreferrer" href="https://goldenstack.net/">golden</a></p>
 	</body>
 </html>
 
@@ -160,9 +166,8 @@ import Timeline from "../components/Timeline.astro";
 	.corner {
 		position: absolute;
 		top: 16px;
-		right: 16px;
 		margin: 0;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 
 	.corner a {
