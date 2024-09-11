@@ -1,0 +1,141 @@
+---
+import Meta from "../components/Meta.astro";
+import Timeline from "../components/Timeline.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<Meta title="Days since last Rust Minecraft server" />
+
+	<body>
+		<h3>It has been</h3><br />
+		<h1 id="days-since">_</h1><br />
+		<h3 id="time-since">days</h3>
+		<h3>since the last release of a</h3><br />
+		<h3>Minecraft server software written in Rust.</h3><br /><br />
+
+		<h4 id="server-link">________</h4>
+		<h4>was released</h4>
+		<h4 id="server-date">__ ________, _____</h4><h4>.</h4>
+		<br>
+
+		<br>
+
+		<Timeline />
+	</body>
+</html>
+
+<script>
+	// Manually sorted - older servers go first.
+	// Feel free to retroactively add servers.
+	const servers = [
+		{
+			name: "Pumpkin",
+			url: "https://github.com/Snowiiii/Pumpkin",
+			date: new Date("2024-08-07") // https://www.reddit.com/r/admincraft/comments/1emn7iy/a_new_server_software/
+		},
+		{
+			name: "FerrumC",
+			url: "https://github.com/sweattypalms/ferrumc",
+			date: new Date("2024-09-09") // https://www.reddit.com/r/rust/comments/1fcvyjb/ferrumc_an_actually_fast_minecraft_server/
+		}
+	];
+
+	function daysSince(server) {
+		const now = Date.now();
+		const last = server.date;
+
+		const day = 24 * 60 * 60 * 1000;
+
+		return Math.floor((now - last) / day);
+	}
+
+	function renderDate(date) {
+		// I am NOT British but I want the day first
+		return date.toLocaleString("en-gb", {
+			day: "numeric",
+			month: "long",
+			year: "numeric",
+		});
+	}
+
+	const id = a => document.getElementById(a);
+	const cls = a => document.getElementsByClassName(a)[0];
+
+	function a(name, url) {
+		let a = document.createElement("a");
+		a.textContent = name;
+		a.href = url;
+		a.target = "_blank";
+		a.rel = "noreferrer";
+
+		return a;
+	}
+
+	function render() {
+		let last = servers[servers.length - 1];
+
+		let days = daysSince(last);
+
+		id("days-since").textContent = days.toString();
+		id("time-since").textContent = days == 1 ? "day" : "days";
+
+		id("server-link").textContent = "";
+		id("server-link").appendChild(a(last.name, last.url));
+
+		id("server-date").textContent = renderDate(last.date);
+	}
+
+	function renderTimeline(server) {
+		let item = document.createElement("div");
+		item.className = "timeline-item";
+
+		let container = document.createElement("div");
+
+		let h4 = document.createElement("h4");
+		h4.className = "title";
+
+		h4.appendChild(a(server.name, server.url));
+
+		let text = document.createElement("h");
+		text.textContent = " released " + renderDate(server.date);
+		h4.appendChild(text);
+
+		container.appendChild(h4);
+		item.appendChild(container);
+		return item;
+	}
+
+	render();
+
+	// console.log(cls("timeline").firstChild);
+	servers.forEach(server => cls("timeline").appendChild(renderTimeline(server)));
+</script>
+
+<style>
+	html {
+		background-color: aliceblue;
+	}
+
+	body {
+		text-align: center;
+
+		padding-top: 12rem;
+	}
+
+	body * {
+		display: inline;
+	}
+
+	h1 {
+		font-size: 8rem;
+	}
+
+	h3 {
+		font-size: 2.5rem;
+	}
+
+	h4 {
+		font-size: 1.75rem;
+	}
+</style>

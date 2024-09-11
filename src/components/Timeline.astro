@@ -1,0 +1,62 @@
+
+<div id="outer">
+    <h2>Timeline</h2>
+    <div class="timeline-container">
+        <div class="timeline"></div>
+    </div>
+</div>
+
+<style is:global>
+    #outer {
+        margin-top: 7%;
+    }
+
+    .timeline-container * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .timeline-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .timeline-item {
+        position: relative;
+    }
+
+    .timeline-item > * {
+        padding: 30px 0 25px 30px;
+        text-align: left;
+    }
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        border-left: 5px solid rgb(68, 68, 255);
+
+        left: 0px;
+        top: -5px;
+        bottom: -5px;
+    }
+
+    .title {
+        position: relative;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+
+        width: 10px;
+        height: 10px;
+
+        background: white;
+
+        border-radius: 10px;
+        border: 3px solid rgb(68, 68, 255);
+
+        left: -36px;
+        top: 4px;
+    }
+</style>
