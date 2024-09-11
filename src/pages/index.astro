@@ -8,6 +8,8 @@ import Timeline from "../components/Timeline.astro";
 	<Meta title="Days since last Rust Minecraft server" />
 
 	<body>
+		<p class="corner"><a href="https://github.com/GoldenStack/dayssincelastrustmcserver">GitHub</a></p>
+
 		<h3>It has been</h3><br />
 		<h1 id="days-since">_</h1><br />
 		<h3 id="time-since">days</h3>
@@ -22,6 +24,8 @@ import Timeline from "../components/Timeline.astro";
 		<br>
 
 		<Timeline />
+
+		<br>
 	</body>
 </html>
 
@@ -92,16 +96,16 @@ import Timeline from "../components/Timeline.astro";
 
 		let container = document.createElement("div");
 
-		let h4 = document.createElement("h4");
-		h4.className = "title";
+		let p = document.createElement("p");
+		p.className = "title";
 
-		h4.appendChild(a(server.name, server.url));
+		p.appendChild(a(server.name, server.url));
 
 		let text = document.createElement("h");
 		text.textContent = " released " + renderDate(server.date);
-		h4.appendChild(text);
+		p.appendChild(text);
 
-		container.appendChild(h4);
+		container.appendChild(p);
 		item.appendChild(container);
 		return item;
 	}
@@ -114,7 +118,11 @@ import Timeline from "../components/Timeline.astro";
 
 <style>
 	html {
+		/* background-color: white; */
 		background-color: aliceblue;
+
+		/* https://heropatterns.com/ the GOAT */
+		background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 	}
 
 	body {
@@ -137,5 +145,27 @@ import Timeline from "../components/Timeline.astro";
 
 	h4 {
 		font-size: 1.75rem;
+	}
+</style>
+
+<style is:global>
+	h2 {
+		font-size: 1.8rem;
+	}
+
+	p, h {
+		font-size: 1.2rem;
+	}
+
+	.corner {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		margin: 0;
+		font-size: 1.5rem;
+	}
+
+	.corner a {
+		text-decoration: none;
 	}
 </style>
