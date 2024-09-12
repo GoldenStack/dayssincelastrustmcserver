@@ -37,6 +37,12 @@ import Timeline from "../components/Timeline.astro";
 <script>
 	// Manually sorted - older servers go first.
 	// Feel free to retroactively add servers.
+
+	// TODO: When were the following announced (with proof)?
+	// Feather @ https://github.com/feather-rs/feather
+	// Bamboo  @ https://github.com/macmv/bamboo
+
+
 	const servers = [
 		{
 			name: "Valence",
@@ -122,8 +128,7 @@ import Timeline from "../components/Timeline.astro";
 
 	render();
 
-	// console.log(cls("timeline").firstChild);
-	servers.forEach(server => cls("timeline").appendChild(renderTimeline(server)));
+	servers.toReversed().forEach(server => cls("timeline").appendChild(renderTimeline(server)));
 </script>
 
 <style>
