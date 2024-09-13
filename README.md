@@ -17,3 +17,7 @@ Required info:
 - Name
 - URL (of source preferably, but documentation also works)
 - Publish date (including basic proof, e.g. Reddit post)
+
+### Disclaimer
+
+No hate towards anyone :) It's always great to see a new Minecraft server in progress. I'm just poking a little fun at how many incomplete Rust implementations there are.
