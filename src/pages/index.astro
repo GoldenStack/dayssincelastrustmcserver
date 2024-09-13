@@ -39,13 +39,18 @@ import Timeline from "../components/Timeline.astro";
 	// Feel free to retroactively add servers.
 
 	// TODO: When were the following announced (with proof)?
-	// Feather  @ https://github.com/feather-rs/feather
 	// Bamboo   @ https://github.com/macmv/bamboo
 	// Hyperion @ https://github.com/andrewgazelka/hyperion
 	// Graphite @ https://github.com/Moulberry/Graphite
+	// MCHPRS   @ https://github.com/MCHPR/MCHPRS/
 
 
 	const servers = [
+		{
+			name: "Feather",
+			url: "https://github.com/feather-rs/feather/",
+			date: new Date("2019-09-01") // https://github.com/feather-rs/feather/releases/tag/v0.4.0
+		},
 		{
 			name: "Valence",
 			url: "https://github.com/valence-rs/valence",
