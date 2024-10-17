@@ -18,6 +18,15 @@ Required info:
 - URL (of source preferably, but documentation also works)
 - Publish date (including basic proof, e.g. Reddit post)
 
+Note: I am aware I am missing a few servers. This is because I could not find a
+specific date when they were first "announced" to the world.
+
+Here are some examples, although I am aware of more. Open an issue if you find
+proof of them being announced!
+- Bamboo @ https://github.com/macmv/bamboo
+- Hematite @ https://github.com/PistonDevelopers/hematite_server
+- Quartz @ https://github.com/Rusty-Quartz/Quartz
+
 ### Disclaimer
 
 No hate towards anyone :) It's always great to see a new Minecraft server in progress. I'm just poking a little fun at how many incomplete Rust implementations there are.
