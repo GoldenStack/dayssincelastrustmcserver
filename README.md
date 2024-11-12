@@ -23,7 +23,6 @@ specific date when they were first "announced" to the world.
 
 Here are some examples, although I am aware of more. Open an issue if you find
 proof of them being announced!
-- Bamboo @ https://github.com/macmv/bamboo
 - Hematite @ https://github.com/PistonDevelopers/hematite_server
 - Quartz @ https://github.com/Rusty-Quartz/Quartz
 
