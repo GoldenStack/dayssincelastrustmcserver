@@ -11,7 +11,7 @@ Who knows which one will happen first! (LOL)
 
 ### Maintenance
 
-Please create an issue for (or PR) any new servers!
+Please create an issue (or PR) for any new servers!
 
 Required info:
 - Name
