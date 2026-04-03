@@ -1,6 +1,6 @@
 # Days since last Rust Minecraft server
 
-Funny little countdown :)
+Funny little countup :)
 
 I'll stop maintaining this site once either of the following happen:
 - One of them achieves full vanilla reimplementation
