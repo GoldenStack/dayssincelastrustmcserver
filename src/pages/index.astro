@@ -163,8 +163,45 @@ import Timeline from "../components/Timeline.astro";
 
 		container.appendChild(p);
 		item.appendChild(container);
+
+        const stargazers = document.createElement("span")
+        stargazers.className = "stargazers";
+
+        p.appendChild(stargazers);
+
+        renderStargazersCount(server).then(span => {
+            if (span) {
+                stargazers.appendChild(span);
+            }
+        });
 		return item;
 	}
+
+    function getStargazersCount(url) {
+        const segments = url.split("/");
+        if (segments[2] !== "github.com") {
+            return Promise.resolve(undefined);
+        }
+        const owner = segments[3];
+        const repo = segments[4];
+        if (!owner || !repo) {
+            return Promise.resolve(undefined);
+        }
+
+        return fetch(`https://api.github.com/repos/${owner}/${repo}`, { cache: "force-cache" })
+            .then(response => response.json())
+            .then(data => data.stargazers_count);
+    }
+
+    function renderStargazersCount(server) {
+        return getStargazersCount(server.url).then(count => {
+            let span = document.createElement("span");
+            if (count !== undefined) {
+                span.textContent = ` (${count}\u2605)`;
+            }
+            return span;
+        });
+    }
 
 	render();
 
@@ -222,4 +259,9 @@ import Timeline from "../components/Timeline.astro";
 	.corner a {
 		text-decoration: none;
 	}
+
+    .stargazers {
+        font-size: 0.8rem;
+        color: #666;
+    }
 </style>
