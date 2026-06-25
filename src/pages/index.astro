@@ -6,31 +6,47 @@ import Timeline from "../components/Timeline.astro";
 <!doctype html>
 <html lang="en">
 	<Meta title="Days since last Rust Minecraft server">
-		<meta name="description" content="Days since the last release of a Minecraft server software written in Rust.">
+		<meta
+			name="description"
+			content="Days since the last release of a Minecraft server software written in Rust."
+		/>
 	</Meta>
 
 	<body>
 		<!-- inline HTML. sue me. -->
-		<p class="corner" style="left: 16px;"><a target="_blank" rel="noreferrer" href="https://github.com/GoldenStack/dayssincelastrustmcserver">GitHub</a></p>
+		<p class="corner" style="left: 16px;">
+			<a
+				target="_blank"
+				rel="noreferrer"
+				href="https://github.com/GoldenStack/dayssincelastrustmcserver"
+				>GitHub</a>
+		</p>
 
 		<h3>It has been</h3><br />
 		<h1 id="days-since">_</h1><br />
-		<h3 id="time-since">days</h3><h3>&nbsp;since the last release of a</h3><br />
+		<h3 id="time-since">days</h3><h3>
+			&nbsp;since the last release of a
+		</h3><br />
 		<h3>Minecraft server software written in Rust.</h3><br /><br />
 
 		<h4 id="server-link">________</h4>
 		<h4>was released</h4>
 		<h4 id="server-date">__ ________, _____</h4><h4>.</h4>
-		<br>
+		<br />
 
-		<br>
+		<br />
 
 		<Timeline />
 
-		<br>
+		<br />
 
 		<!-- inline HTML. sue me. -->
-		<p class="corner" style="right: 16px;">made by <a target="_blank" rel="noreferrer" href="https://goldenstack.net/">golden</a></p>
+		<p class="corner" style="right: 16px;">
+			made by <a
+				target="_blank"
+				rel="noreferrer"
+				href="https://goldenstack.net/">golden</a>
+		</p>
 	</body>
 </html>
 
@@ -42,78 +58,78 @@ import Timeline from "../components/Timeline.astro";
 		{
 			name: "Feather",
 			url: "https://github.com/feather-rs/feather",
-			date: new Date("2019-09-01") // https://github.com/feather-rs/feather/releases/tag/v0.4.0
+			date: new Date("2019-09-01"), // https://github.com/feather-rs/feather/releases/tag/v0.4.0
 		},
 		{
 			name: "MCHPRS",
 			url: "https://github.com/MCHPR/MCHPRS",
-			date: new Date("2020-06-20") // StackDoubleFlow recommended date
+			date: new Date("2020-06-20"), // StackDoubleFlow recommended date
 		},
 		{
 			name: "Bamboo",
 			url: "https://github.com/macmv/bamboo",
-			date: new Date("2022-01-27") // https://www.reddit.com/r/rust_gamedev/comments/sdumpo/made_a_minecraft_server_in_rust_which_can_support/
+			date: new Date("2022-01-27"), // https://www.reddit.com/r/rust_gamedev/comments/sdumpo/made_a_minecraft_server_in_rust_which_can_support/
 		},
 		{
 			name: "Valence",
 			url: "https://github.com/valence-rs/valence",
-			date: new Date("2022-09-04") // https://www.youtube.com/watch?v=6P072lKE01s
+			date: new Date("2022-09-04"), // https://www.youtube.com/watch?v=6P072lKE01s
 		},
 		{
 			name: "Hyperion",
 			url: "https://github.com/andrewgazelka/hyperion",
-			date: new Date("2024-03-15") // Andrew recommended date
+			date: new Date("2024-03-15"), // Andrew recommended date
 		},
 		{
 			name: "Pumpkin",
 			url: "https://pumpkinmc.org/",
-			date: new Date("2024-07-31") // https://www.reddit.com/r/rust/comments/1egx979/minecraft_server_written_in_rust/
+			date: new Date("2024-07-31"), // https://www.reddit.com/r/rust/comments/1egx979/minecraft_server_written_in_rust/
 		},
 		{
 			name: "FerrumC",
 			url: "https://github.com/sweattypalms/ferrumc",
-			date: new Date("2024-09-09") // https://www.reddit.com/r/rust/comments/1fcvyjb/ferrumc_an_actually_fast_minecraft_server/
+			date: new Date("2024-09-09"), // https://www.reddit.com/r/rust/comments/1fcvyjb/ferrumc_an_actually_fast_minecraft_server/
 		},
 		{
 			name: "PKMC",
 			url: "https://github.com/Vulae/pkmc",
-			date: new Date("2025-01-21") // https://www.reddit.com/r/rust/comments/1i6lqxe/media_simple_rust_minecraft_server/
+			date: new Date("2025-01-21"), // https://www.reddit.com/r/rust/comments/1i6lqxe/media_simple_rust_minecraft_server/
 		},
 		{
 			name: "Oxide",
 			url: "https://github.com/T-x-T/Oxide",
-			date: new Date("2025-03-27") // https://www.youtube.com/watch?v=W97NohIgWfU (first video in series where joining is implemented; TheTxt said this was fine)
+			date: new Date("2025-03-27"), // https://www.youtube.com/watch?v=W97NohIgWfU (first video in series where joining is implemented; TheTxt said this was fine)
 		},
 		{
 			name: "KittyMC",
 			url: "https://github.com/Kek5chen/kittymc",
-			date: new Date("2025-03-29") // Announced on the Rust discord server https://discord.com/channels/273534239310479360/1355623526127636560/1355623526127636560
+			date: new Date("2025-03-29"), // Announced on the Rust discord server https://discord.com/channels/273534239310479360/1355623526127636560/1355623526127636560
 		},
 		{
 			name: "PicoLimbo",
 			url: "https://github.com/Quozul/PicoLimbo",
-			date: new Date("2025-05-14") // Announced on the Rust subreddit https://www.reddit.com/r/rust/comments/1kmhxee/i_wrote_a_lightweight_minecraft_server_in_rust/
+			date: new Date("2025-05-14"), // Announced on the Rust subreddit https://www.reddit.com/r/rust/comments/1kmhxee/i_wrote_a_lightweight_minecraft_server_in_rust/
 		},
 		{
 			name: "Steel MC",
 			url: "https://steel-foundation.github.io/SteelDocs/",
-			date: new Date("2025-10-16") // Announced on the Pumpkin discord https://discord.com/channels/1268592337445978193/1268611318617866261/1427970155241013350
+			date: new Date("2025-10-16"), // Announced on the Pumpkin discord https://discord.com/channels/1268592337445978193/1268611318617866261/1427970155241013350
 		},
 		{
 			name: "Temper",
 			url: "https://temper-mc.com/",
-			date: new Date("2026-04-30") // Announced in the MC Protocol discord https://discord.com/channels/934181095136710696/1499621090220048597/1499621090220048597
+			date: new Date("2026-04-30"), // Announced in the MC Protocol discord https://discord.com/channels/934181095136710696/1499621090220048597/1499621090220048597
 		},
-    {  
+		{
 			name: "Infrarust",
 			url: "https://infrarust.dev/",
-			date: new Date("2026-06-09") // Announced in the Infrarust discord https://discord.com/channels/1330603066478825502/1330609686445035660/1513997875363709140
-    },
+			date: new Date("2026-06-09"), // Announced in the Infrarust discord https://discord.com/channels/1330603066478825502/1330609686445035660/1513997875363709140
+		},
 		{
 			name: "Coral",
 			url: "https://github.com/Rinny-Inc/Coral",
-			date: new Date("2026-06-19") // Announced in the Rust subreddit https://www.reddit.com/r/rust/comments/1ub2n8l/my_first_real_rust_program_is_a_minecraft_server/
-		}
+			date: new Date("2026-06-19"), // Announced in the Rust subreddit https://www.reddit.com/r/rust/comments/1ub2n8l/my_first_real_rust_program_is_a_minecraft_server/
+		},
 	];
 
 	function daysSince(server) {
@@ -134,8 +150,8 @@ import Timeline from "../components/Timeline.astro";
 		});
 	}
 
-	const id = a => document.getElementById(a);
-	const cls = a => document.getElementsByClassName(a)[0];
+	const id = (a) => document.getElementById(a);
+	const cls = (a) => document.getElementsByClassName(a)[0];
 
 	function a(name, url) {
 		let a = document.createElement("a");
@@ -183,7 +199,11 @@ import Timeline from "../components/Timeline.astro";
 
 	render();
 
-	servers.toReversed().forEach(server => cls("timeline").appendChild(renderTimeline(server)));
+	servers
+		.toReversed()
+		.forEach((server) =>
+			cls("timeline").appendChild(renderTimeline(server)),
+		);
 </script>
 
 <style>
@@ -223,7 +243,8 @@ import Timeline from "../components/Timeline.astro";
 		font-size: 1.8rem;
 	}
 
-	p, h {
+	p,
+	h {
 		font-size: 1.2rem;
 	}
 
